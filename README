@@ -1,0 +1,17 @@
+Motivation (with dates! you like dates?):
+https://github.com/secdev/scapy/commit/cacbfa88befc861467acf1441c0d1e481be38217#diff-58adc137102f2af62500cb0e27e64e7a70880364b1e86477a3be27edf4facee3R323
+https://5d4a.wordpress.com/2011/08/25/having-fun-with-nfqueue-and-scapy/
+https://www.youtube.com/watch?v=CAV0XrbEwNc
+
+
+compiling and running requires libnetfilter_queue library and headers
+on debian based distors, these should be named libnetfilter-queue-dev and libnetfilter-queue1
+
+to compile simply run 'make'
+if that fails you will need to modify the Makefile to properly point to libnetfilter
+
+to use, set up a queue using iptables and run mimicus for that queue
+the nfqsetup.sh and nfqunset.sh provde examples for setting up a queue
+
+you must specify the queue and library to use.  for example:
+    mimicus -q 0 -m ./libwinxp.so
